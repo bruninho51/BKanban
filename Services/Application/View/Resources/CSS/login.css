@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#img-login {
+    background-color: red;
+    width: 70%;
+    height: 100%;
+    float: left;
+    background-image: url("/Services/Application/View/Resources/Images/fundo-login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#login {
+    background-color: black;
+    width: 30%;
+    height: 100%;
+    margin-left: 70%;
+    position: relative;
+}
