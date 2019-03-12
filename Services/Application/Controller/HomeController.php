@@ -2,24 +2,15 @@
 
 namespace Services\Application\Controller;
 
-use \Interop\Container\ContainerInterface as ContainerInterface;
-
-class HomeController 
+class HomeController extends Controller
 {
-   private $container;
-
-   public function __construct(ContainerInterface $container)
-   {
-      $this->container = $container;
-   }
 
    public function home($request, $response, $args) {
-      $data['container'] = $this->container;
-      $data['response'] = $response;
-      $data['title'] = 'Kanban';
-      $data['css'] = 'home';
-      $data['footer'] = [];
 
-      return $this->container->renderer->render($response, 'home.php', $data);
+      return $this->view->render($response, 'home', [
+         'title' => 'Kanban',
+         'stylesheets' => ['home'],
+         'scripts' => ['kanban']
+      ]);
    }
 }
